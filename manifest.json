@@ -1,0 +1,25 @@
+{
+	"name": "GeoGuessr Cheats",
+	"description": "It's as simple as pressing the key G and getting the exact mark!!",
+	"author": "roady",
+	"manifest_version": 2,
+	"version": "1.0",
+	"browser_action": {
+		"default_title": "GeoGuessr Insane",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.geoguessr.com/*"],
+			"run_at": "document_end",
+			"js": ["Main.js"],
+			"all_frames": true
+		}
+	],
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+	"permissions": ["storage"]
+}
